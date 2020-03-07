@@ -1,0 +1,27 @@
+base_lr: 0.1
+batch_size: 32
+device: [0, 1, 2, 3]
+feeder: feeders.feeder.Feeder
+model: model.magcn.Model
+model_args:
+  graph: graph.ntu_rgb_d.Graph
+  graph_args: {labeling_mode: spatial}
+  num_class: 60
+  num_person: 2
+  num_point: 25
+model_saved_name: ./runs/ntu_cv_joint_mutual1dynamic_total
+modf: mutual
+nesterov: true
+num_epoch: 40
+step: [30, 40]
+test_batch_size: 256
+test_feeder_args: {data_path: ./data/ntu/xview/val_data_joint.npy, drop_num: 1, label_path: ./data/ntu/xview/val_label.pkl,
+  modf: noise, ntype: Chaos, ttype: Fix}
+train_feeder_args: {data_path: ./data/ntu/xview/train_data_joint.npy, debug: false,
+  drop_num: 1, label_path: ./data/ntu/xview/train_label.pkl, modf: mutual, normalization: false,
+  ntype: Chaos, random_choose: false, random_move: false, random_shift: false, ttype: dynamic,
+  window_size: -1}
+weight_decay: 0.0001
+work_dir: ./work_dir/ntu/xview/ablation
+weights: ./runs/ntu_cv_joint_mutual1dynamic_total-main-20-25872.pt
+ar_weights: ./runs/ntu_cv_joint_mutual1dynamic_total-regression-20-25872.pt

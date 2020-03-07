@@ -1,0 +1,30 @@
+ar_weights: ./runs/weights/ntu_cs_agcn_joint_mutual5dynamic-regression-49-62600.pt
+device:
+- 0
+- 1
+- 2
+- 3
+feeder: feeders.feeder.Feeder
+model: model.magcn.Model
+model_args:
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 60
+  num_person: 2
+  num_point: 25
+model_saved_name: ./runs/ntu_cs_agcn_joint_mutual5dynamic-regression
+modf: mutual
+phase: test
+save_score: true
+test_batch_size: 512
+test_feeder_args:
+  data_path: ./data/ntu/xsub/val_data_joint.npy
+  debug: false
+  drop_num: 10
+  label_path: ./data/ntu/xsub/val_label.pkl
+  modf: noise
+  ntype: Chaos
+  ttype: fix
+weights: ./runs/weights/ntu_cs_agcn_joint_mutual5dynamic-main-49-62600.pt
+work_dir: ./work_dir/ntu/xsub/magcn_test_joint

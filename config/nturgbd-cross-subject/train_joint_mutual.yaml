@@ -1,0 +1,50 @@
+work_dir: ./work_dir/ntu/xsub/agcn_joint
+model_saved_name: ./runs/ntu_cs_agcn_joint_mutual5dynamic
+modf: mutual # here
+#weights: ./runs/ntu_cv_agcn_joint_mutual5dynamic-main-31-38808.pt
+#ar_weights: ./runs/ntu_cv_agcn_joint_mutual5dynamic-regression-31-38808.pt
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/ntu/xsub/train_data_joint.npy
+  label_path: ./data/ntu/xsub/train_label.pkl
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: -1
+  normalization: False
+  modf: mutual 
+  drop_num: 5 # here 
+  ntype: Chaos 
+  ttype: dynamic # here
+
+test_feeder_args:
+  data_path: ./data/ntu/xsub/val_data_joint.npy
+  label_path: ./data/ntu/xsub/val_label.pkl
+  modf: noise 
+  drop_num: 1 # here
+  ntype: Chaos
+  ttype: Fix # here
+
+# model
+model: model.magcn.Model
+model_args:
+  num_class: 60
+  num_point: 25
+  num_person: 2
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+
+#optim
+weight_decay: 0.0001
+base_lr: 0.1
+step: [30, 40]
+
+# training
+device: [0,1,2,3]
+batch_size: 32
+test_batch_size: 256
+num_epoch: 50
+nesterov: True
