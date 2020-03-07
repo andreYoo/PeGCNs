@@ -1,2 +1,4 @@
-# pytorch_PeGCN
-Predictively Encoded Graph Convolutional Network
+# Predictively Encoded Graph Convolutional Network
+Official project for 'Predictively Encoded Graph Convolutional Network for Noise-Robust Skeleton-based Action Recognition'
+
+
