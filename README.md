@@ -1,8 +1,7 @@
 # Predictively Encoded Graph Convolutional Network
 Official project for 'Predictively Encoded Graph Convolutional Network for Noise-Robust Skeleton-based Action Recognition'
 (Implemented with Py36 and Pytorch)
-
-![](readme/test.png)
+![](./123.png)
 
 
 * The paper is submitted to IV2020, and it is under the review.
