@@ -120,12 +120,12 @@ skeletons using graphical components such as nodes and connections, have achieve
 
 ## How to train
 ~~~
-python main.py
+python main2.py --config ./config/kinetics-skeleton/train_joint_mutual.yaml
 ~~~
 
 
 
 ## How to monitoring
 ~~~
-python main.py
+tensorboard --logdir=./wordir
 ~~~
