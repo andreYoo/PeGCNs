@@ -18,35 +18,104 @@ skeletons using graphical components such as nodes and connections, have achieve
 
 ## File configuration
 .<br>
-├── frequency_discriminator.pkl<br>
-├── image_discriminator.pkl<br>
-├── inception_score_graph.txt<br>
-├── logs<br>
-│   └── events.out.tfevents.1578130324.neumann-System-Product-Name<br>
-├── main.py<br>
-├── model<br>
-│   ├── aiftn.py<br>
-│   └── __pycache__<br>
-│       └── aiftn.cpython-36.pyc<br>
-├── negative_generator.pkl<br>
-├── positive_generator.pkl<br>
-├── README.md<br>
-├── src<br>
-│   ├── config.py<br>
-│   ├── dataset.py<br>
+├── abla.py<br>
+├── arun.sh<br>
+├── config<br>
+│   ├── config.txt<br>
+│   ├── kinetics-skeleton<br>
+│   │   ├── test_bone.yaml<br>
+│   │   ├── test_joint_mutual_none.yaml<br>
+│   │   ├── test_joint_mutual_tmp.yaml<br>
+│   │   ├── test_joint_mutual.yaml<br>
+│   │   ├── test_joint.yaml<br>
+│   │   ├── train_bone.yaml<br>
+│   │   ├── train_joint_mutual_v2.yaml<br>
+│   │   ├── train_joint_mutual.yaml<br>
+│   │   └── train_joint.yaml<br>
+│   ├── nturgbd-cross-subject<br>
+│   │   ├── test_bone.yaml<br>
+│   │   ├── test_joint_mutual_tmp.yaml<br>
+│   │   ├── test_joint_mutual.yaml<br>
+│   │   ├── test_joint.yaml<br>
+│   │   ├── train_bone.yaml<br>
+│   │   ├── train_joint_aagcn.yaml<br>
+│   │   ├── train_joint_mutual.yaml<br>
+│   │   ├── train_joint_tmp.yaml<br>
+│   │   └── train_joint.yaml<br>
+│   └── nturgbd-cross-view<br>
+│       ├── test_bone.yaml<br>
+│       ├── test_joint_mutual.yaml<br>
+│       ├── test_joint_tmp.yaml<br>
+│       ├── test_joint.yaml<br>
+│       ├── tmp_train_joint_mutual.yaml<br>
+│       ├── train_bone.yaml<br>
+│       ├── train_joint_mutual.yaml<br>
+│       └── train_joint.yaml<br>
+├── data<br>
+│   ├── kinetics -> /home/peter/workspace/dataset/Kinetics/kinetics-skeleton/<br>
+│   └── ntu -> /home/peter/workspace/dataset/NTURGB+D/NTURGBD-2s-AGCN/ntu/<br>
+├── data_gen<br>
+│   ├── gen_bone_data.py<br>
+│   ├── gen_motion_data.py<br>
 │   ├── __init__.py<br>
+│   ├── kinetics_gendata.py<br>
+│   ├── merge_joint_bone_data.py<br>
+│   ├── ntu_gendata.py<br>
+│   ├── preprocess.py<br>
 │   ├── __pycache__<br>
-│   │   ├── config.cpython-36.pyc<br>
-│   │   ├── dataset.cpython-36.pyc<br>
 │   │   ├── __init__.cpython-36.pyc<br>
-│   │   ├── tensorboard_logger.cpython-36.pyc<br>
-│   │   └── utils.cpython-36.pyc<br>
-│   ├── tensorboard_logger.py<br>
-│   └── utils.py<br>
-├── tb_log.txt<br>
-├── test.png<br>
-├── _t_main.py<br>
-└── training_result_vis<br>
+│   │   ├── preprocess.cpython-36.pyc<br>
+│   │   └── rotation.cpython-36.pyc<br>
+│   └── rotation.py<br>
+├── ensemble.py<br>
+├── feeders<br>
+│   ├── feeder.py<br>
+│   ├── __init__.py<br>
+│   ├── __pycache__
+│   │   ├── feeder.cpython-36.pyc<br>
+│   │   ├── __init__.cpython-36.pyc<br>
+│   │   └── tools.cpython-36.pyc<br>
+│   └── tools.py<br>
+├── graph<br>
+│   ├── __init__.py<br>
+│   ├── kinetics.py<br>
+│   ├── ntu_rgb_d.py<br>
+│   ├── __pycache__
+│   │   ├── __init__.cpython-36.pyc<br>
+│   │   ├── kinetics.cpython-36.pyc<br>
+│   │   ├── ntu_rgb_d.cpython-36.pyc<br>
+│   │   └── tools.cpython-36.pyc<br>
+│   └── tools.py<br>
+├── inference_ab.py<br>
+├── inference.py<br>
+├── main2.py<br>
+├── main3.py<br>
+├── main_ce.py<br>
+├── main.py<br>
+├── main_total.py<br>
+├── model<br>
+│   ├── aagcn.py<br>
+│   ├── agcn.py<br>
+│   ├── Autoregression.py<br>
+│   ├── __init__.py<br>
+│   ├── magcn.py<br>
+│   └── __pycache__<br>
+│       ├── aagcn.cpython-36.pyc<br>
+│       ├── agcn.cpython-36.pyc<br>
+│       ├── Autoregression.cpython-36.pyc<br>
+│       ├── __init__.cpython-36.pyc<br>
+│       └── magcn.cpython-36.pyc<br>
+├── nturgbd_raw<br>
+│   └── samples_with_missing_skeletons.txt<br>
+├── README.md<br>
+├── run.py<br>
+├── runs<br>
+├── run.sh<br>
+├── test.py<br>
+├── tmp2.sh<br>
+└── work_dirs<br>
+
+
 
 
 ## How to train
