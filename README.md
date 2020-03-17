@@ -53,3 +53,10 @@ skeletons using graphical components such as nodes and connections, have achieve
 ~~~
 python main.py
 ~~~
+
+
+
+## How to monitoring
+~~~
+python main.py
+~~~
