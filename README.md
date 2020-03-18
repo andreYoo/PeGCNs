@@ -8,7 +8,14 @@ Official project for 'Predictively Encoded Graph Convolutional Network for Noise
 
 If you use this source code, please cite the paper as follows. 
 ~~~
-Will be updated
+@misc{yu2020predictively,
+    title={Predictively Encoded Graph Convolutional Network for Noise-Robust Skeleton-based Action Recognition},
+    author={Jongmin Yu and Yongsang Yoon and Moongu Jeon},
+    year={2020},
+    eprint={2003.07514},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ~~~
 
 
